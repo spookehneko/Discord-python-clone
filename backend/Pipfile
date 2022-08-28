@@ -7,12 +7,16 @@ name = "pypi"
 flask = "*"
 python-dotenv = "*"
 sqlalchemy = "*"
+pyjwt = "*"
+flask-sqlalchemy = "*"
+mysql-connector-python = "*"
+bcrypt = "*"
+flask-cors = "*"
 
 [dev-packages]
-
 
 [scripts]
 dev = "flask run"
 
 [requires]
-python_version = "3.8"
+python_version = "3.10"

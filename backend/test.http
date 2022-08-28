@@ -1,0 +1,19 @@
+
+### User Signup 
+POST http://localhost:5000/register_user HTTP/1.1
+content-type: application/json
+
+{
+    "email": "sahil@gmail.com",
+    "password": "123456"
+}
+
+### User Signin
+
+POST http://localhost:5000/login_user HTTP/1.1
+content-type: application/json
+
+{
+    "email": "sahil.com",
+    "password": "1s23456"
+}
