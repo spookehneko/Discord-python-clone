@@ -1,4 +1,4 @@
-from .database import init, User
+from .database import init, User, Message, ServerInfo, ServerMember, ServerTextChannel, PersonalMessage
 init()
 
 from flask import Flask, request, make_response, jsonify
@@ -9,6 +9,14 @@ from .libs import jwtHelpers
 app = Flask(__name__)
 CORS(app)
 
+
+# uid = User.addUser("E@gmail.com","123", "hot boy")
+# sid = ServerInfo.createServer('naruto server')
+# ServerMember.addMember(1, 1)
+# ServerTextChannel.createTextChannel("general chat", 1)
+mid = Message.createMessage("Hi", 1)
+PersonalMessage.sendDM(1,3,mid)
+
 @app.get('/')
 def root():
     return "Yo Yo bantai!"
@@ -16,10 +24,11 @@ def root():
 @app.post('/register_user')
 def registerUser():
     req_data = request.get_json()
+    username = req_data['username']
     email = req_data['email']
     password = req_data['password']
 
-    uid = User.addUser(email, password)
+    uid = User.addUser(email, password, username)
 
     token = jwtHelpers.sign({
         "uid" : uid

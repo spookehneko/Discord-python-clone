@@ -4,6 +4,7 @@ POST http://localhost:5000/register_user HTTP/1.1
 content-type: application/json
 
 {
+    "username" : "coolguy69",
     "email": "sahil@gmail.com",
     "password": "123456"
 }
@@ -15,5 +16,5 @@ content-type: application/json
 
 {
     "email": "sahil.com",
-    "password": "1s23456"
+    "password": "123456"
 }
