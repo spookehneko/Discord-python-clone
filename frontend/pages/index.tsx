@@ -43,11 +43,11 @@ const Home: NextPage = () => {
       <div className='flex flex-col justify-center items-center text-sm mb-5 gap-5'>
         <div className='text-center'>
           <div className='text-3xl whitespace-nowrap font-bold'>
-            Welcome to Discord
+            Welcome to Venture
           </div>
           <div className='text-discord-text-light text-center text-xs px-2'>
-            Join over 100 million people who use Discord to talk with
-            communities and friends
+            The chat app made 
+            for the future
           </div>
         </div>
 
